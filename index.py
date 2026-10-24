@@ -145,6 +145,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+feature_names = [
+        'BMI', 'Smoking', 'AlcoholDrinking', 'Stroke', 'PhysicalHealth',
+        'MentalHealth', 'DiffWalking', 'Sex', 'AgeCategory', 'Diabetic',
+        'PhysicalActivity', 'GenHealth', 'SleepTime', 'Asthma',
+        'KidneyDisease', 'SkinCancer'
+    ]
+
 # ======================
 # LOAD MODEL
 # ======================
@@ -161,12 +168,6 @@ try:
 except Exception as e:
     st.error(f"Gagal memuat model: {e}")
     model_ready = False
-    feature_names = [
-    'BMI', 'Smoking', 'AlcoholDrinking', 'Stroke', 'PhysicalHealth',
-    'MentalHealth', 'DiffWalking', 'Sex', 'AgeCategory', 'Diabetic',
-    'PhysicalActivity', 'GenHealth', 'SleepTime', 'Asthma',
-    'KidneyDisease', 'SkinCancer'
-]
 
 # ======================
 # HEADER
